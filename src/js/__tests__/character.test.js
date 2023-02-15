@@ -15,10 +15,10 @@ test('test Error short name', () => {
   expect(() => { Character('F', 'Swordsman'); }).toThrow(Error);
 });
 
-test('test Error short name', () => {
+test('test Error long name', () => {
   expect(() => { Character('Frodothemaster', 'Swordsman'); }).toThrow(Error);
 });
 
-test('test Error short name', () => {
+test('test Error character type', () => {
   expect(() => { Character('Frodo', 'King'); }).toThrow(Error);
 });
