@@ -1,6 +1,4 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-plusplus */
-/* eslint-disable no-underscore-dangle */
+/* eslint no-underscore-dangle: ["error", { "allowAfterThis": true }] */
 export default class Character {
   constructor(name, type) {
     this.name = name;
