@@ -17,8 +17,8 @@ export default class Character {
   }
 
   set type(value) {
-    const charTypes = ['Bowman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
-    if (charTypes.forEach((item) => item !== value)) {
+    const charTypes = ['Bowerman', 'Swordsman', 'Magician', 'Daemon', 'Undead', 'Zombie'];
+    if (!charTypes.includes(value)) {
       throw new Error('Персонажа такого типа не существует!');
     }
     this._type = value;
