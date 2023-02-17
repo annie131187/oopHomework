@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }] */
 import Character from '../character';
 
 test('test Character class', () => {
@@ -12,13 +13,25 @@ test('test Character class', () => {
 });
 
 test('test Error short name', () => {
-  expect(() => { Character('F', 'Swordsman'); }).toThrow(Error);
+  function getPerson() {
+    const person = new Character('F', 'Swordsman');
+    return person;
+  }
+  expect(getPerson).toThrow(Error);
 });
 
 test('test Error long name', () => {
-  expect(() => { Character('Frodothemaster', 'Swordsman'); }).toThrow(Error);
+  function getPerson() {
+    const person = new Character('Frodothemaster', 'Swordsman');
+    return person;
+  }
+  expect(getPerson).toThrow(Error);
 });
 
 test('test Error character type', () => {
-  expect(() => { Character('Frodo', 'King'); }).toThrow(Error);
+  function getPerson() {
+    const person = new Character('Frodo', 'King');
+    return person;
+  }
+  expect(getPerson).toThrow(Error);
 });
